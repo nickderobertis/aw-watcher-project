@@ -1,0 +1,20 @@
+{
+    "template": "https://github.com/nickderobertis/cookiecutter-pypi-sphinx",
+    "commit": "1fdefcda9765e34fd70a4757a2eecc42ea249561",
+    "context": {
+        "cookiecutter": {
+            "package_name": "aw-watcher-project",
+            "package_directory": "aw_watcher_project",
+            "full_name": "ActivityWatch Project Selector and Watcher",
+            "repo_name": "aw-watcher-project",
+            "repo_username": "nickderobertis",
+            "short_description": "System tray app for ActivityWatch to report current project",
+            "package_author": "Nick DeRobertis",
+            "author_email": "whoopnip@gmail.com",
+            "google_analytics_id": "G-9WQJ7LEXB3",
+            "logo_url": "",
+            "_template": "https://github.com/nickderobertis/cookiecutter-pypi-sphinx"
+        }
+    },
+    "directory": null
+}
