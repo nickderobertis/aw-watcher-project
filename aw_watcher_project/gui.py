@@ -189,6 +189,10 @@ class ProjectWatcherGUI:
     def _pulse_time(self) -> float:
         return self.interval + 1
 
+    @property
+    def _commit_interval(self) -> float:
+        return max(0.1, self.interval - 1)
+
     def _send_heartbeats(self):
         with self.client:
             while True:
@@ -200,7 +204,11 @@ class ProjectWatcherGUI:
                 # The duration between the heartbeats will be less than pulsetime, so they will get merged.
                 logger.debug(f"Sending data: {heartbeat_data}")
                 self.client.heartbeat(
-                    self.bucket_id, heartbeat_event, pulsetime=self._pulse_time
+                    self.bucket_id,
+                    heartbeat_event,
+                    pulsetime=self._pulse_time,
+                    queued=True,
+                    commit_interval=self._commit_interval,
                 )
 
                 # Sleep a second until next heartbeat
