@@ -58,7 +58,6 @@ PACKAGE_CLASSIFIERS = [
     'Programming Language :: Python :: 3.7'
 ]
 
-AW_CLIENT_PATH = Path(__file__).parent / 'aw-client'
 # Add any third party packages you use in requirements here
 PACKAGE_INSTALL_REQUIRES = [
     # Include the names of the packages and any required versions in as strings
@@ -66,11 +65,11 @@ PACKAGE_INSTALL_REQUIRES = [
     # 'package',
     # 'otherpackage>=1,<2'
     'tzlocal',
-    f'aw-client @ file://{AW_CLIENT_PATH}',
     'PyYAML',
     'PySide6',
     'Pillow',
     'typing_extensions',
+    'aw_client @ https://github.com/ActivityWatch/aw-client/tarball/master',
 ]
 
 # Add any third party packages you use in requirements for optional features of your package here
