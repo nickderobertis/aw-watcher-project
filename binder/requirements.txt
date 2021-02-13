@@ -1,7 +1,7 @@
-Pillow
-PySide6
-aw-watcher-project
-aw-client @ file:///home/runner/work/aw-watcher-project/aw-watcher-project/aw-client
 PyYAML
-typing_extensions
+aw-watcher-project
 tzlocal
+PySide6
+aw_client @ https://github.com/ActivityWatch/aw-client/tarball/master
+typing_extensions
+Pillow
