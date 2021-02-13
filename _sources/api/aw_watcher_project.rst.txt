@@ -1,0 +1,59 @@
+aw\_watcher\_project package
+============================
+
+.. automodule:: aw_watcher_project
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+aw\_watcher\_project.app module
+-------------------------------
+
+.. automodule:: aw_watcher_project.app
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aw\_watcher\_project.config module
+----------------------------------
+
+.. automodule:: aw_watcher_project.config
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aw\_watcher\_project.exc module
+-------------------------------
+
+.. automodule:: aw_watcher_project.exc
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aw\_watcher\_project.get\_time\_spent module
+--------------------------------------------
+
+.. automodule:: aw_watcher_project.get_time_spent
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aw\_watcher\_project.gui module
+-------------------------------
+
+.. automodule:: aw_watcher_project.gui
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aw\_watcher\_project.logger module
+----------------------------------
+
+.. automodule:: aw_watcher_project.logger
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

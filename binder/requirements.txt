@@ -1,0 +1,7 @@
+Pillow
+PySide6
+aw-watcher-project
+aw-client @ file:///home/runner/work/aw-watcher-project/aw-watcher-project/aw-client
+PyYAML
+typing_extensions
+tzlocal

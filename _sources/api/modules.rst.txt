@@ -1,0 +1,7 @@
+aw_watcher_project
+==================
+
+.. toctree::
+   :maxdepth: 4
+
+   aw_watcher_project
