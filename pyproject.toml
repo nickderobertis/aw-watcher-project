@@ -43,6 +43,9 @@ mypy = "^0.800"
 pypandoc = "^1.5"
 cruft = "^2.6.1"
 
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
 
 [build-system]
 requires = ["setuptools>=41.0", "setuptools-scm", "wheel", "conf", "version"]
