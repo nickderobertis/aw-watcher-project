@@ -12,7 +12,7 @@ System tray app for ActivityWatch to report current project
 Install `aw-watcher-project`:
 
 ```
-pip install aw-watcher-project
+pip install git+https://github.com/nickderobertis/aw-watcher-project.git
 ```
 
 If you do not have Qt installed, you will need to install

@@ -1,5 +1,5 @@
 
-name: Test, Build and Push Python Package and Docs
+name: Test, Build and Push Docs
 
 on:
   push: {}
@@ -150,14 +150,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.gh_token }}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: ./docs
-      - name: Build PyPI Package
-        if: steps.output_pypi_version.outputs.version != steps.output_build_version.outputs.version
-        run: |
-          poetry run python upload.py --build-only
-      - name: Upload PyPI Package
-        if: steps.output_pypi_version.outputs.version != steps.output_build_version.outputs.version
-        uses: pypa/gh-action-pypi-publish@master
-        with:
-          user: __token__
-          password: ${{ secrets.pypi_password }}
-

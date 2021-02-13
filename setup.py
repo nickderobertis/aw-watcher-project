@@ -1,9 +1,18 @@
 import sys
 import os
+import shutil
+from pathlib import Path
 sys.path.insert(0, os.path.dirname(__file__))
 import conf
 from version import __version__
 from setuptools import setup, find_packages
+
+# Get aw_client in path
+# AW_CLIENT_DIR = Path(__file__).parent / 'aw-client' / 'aw_client'
+# AW_CLIENT_OUT_DIR = Path(__file__).parent / 'aw_watcher_project' / 'aw_client'
+# if AW_CLIENT_OUT_DIR.exists():
+#     shutil.rmtree(AW_CLIENT_OUT_DIR)
+# shutil.copytree(AW_CLIENT_DIR, AW_CLIENT_OUT_DIR)
 
 extra_kwargs = {}
 
