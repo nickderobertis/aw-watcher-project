@@ -1,20 +1,26 @@
 Getting started with aw-watcher-project
-**********************************
+*********************************************
 
 Install
 =======
 
 Install via::
 
-    pip install aw-watcher-project
+    pip install git+https://github.com/nickderobertis/aw-watcher-project.git
 
 Usage
 =========
 
-Some highlighted functionality.
+If you do not have Qt installed, you will need to install
+that as well. Example for Ubuntu/Debian::
 
-This is a simple example::
+    apt-get install qt5-default
 
-    import aw_watcher_project
+
+See more at: https://doc.qt.io/qtforpython/gettingstarted.html
+
+Run `aw-watcher-project` from the command line to start the system
+tray application.
+
 
 

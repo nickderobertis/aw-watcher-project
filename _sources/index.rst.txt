@@ -29,11 +29,8 @@ aw-watcher-project
 -------------------------------------------------------
 
 
-This is a simple example:
-
-.. code:: python
-
-    import aw_watcher_project
+Run `aw-watcher-project` from the command line to start the system
+tray application.
 
 
 .. toctree:: api/modules

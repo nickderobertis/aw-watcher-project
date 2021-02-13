@@ -361,6 +361,10 @@
     <span class="k">def</span> <span class="nf">_pulse_time</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">interval</span> <span class="o">+</span> <span class="mi">1</span>
 
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">_commit_interval</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+        <span class="k">return</span> <span class="nb">max</span><span class="p">(</span><span class="mf">0.1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">interval</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
     <span class="k">def</span> <span class="nf">_send_heartbeats</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="p">:</span>
             <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
@@ -372,7 +376,11 @@
                 <span class="c1"># The duration between the heartbeats will be less than pulsetime, so they will get merged.</span>
                 <span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Sending data: </span><span class="si">{</span><span class="n">heartbeat_data</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">client</span><span class="o">.</span><span class="n">heartbeat</span><span class="p">(</span>
-                    <span class="bp">self</span><span class="o">.</span><span class="n">bucket_id</span><span class="p">,</span> <span class="n">heartbeat_event</span><span class="p">,</span> <span class="n">pulsetime</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_pulse_time</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">bucket_id</span><span class="p">,</span>
+                    <span class="n">heartbeat_event</span><span class="p">,</span>
+                    <span class="n">pulsetime</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_pulse_time</span><span class="p">,</span>
+                    <span class="n">queued</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                    <span class="n">commit_interval</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">_commit_interval</span><span class="p">,</span>
                 <span class="p">)</span>
 
                 <span class="c1"># Sleep a second until next heartbeat</span>

@@ -1,7 +1,7 @@
-PyYAML
-aw-watcher-project
-tzlocal
 PySide6
-aw_client @ https://github.com/ActivityWatch/aw-client/tarball/master
 typing_extensions
+PyYAML
+aw_client @ https://github.com/ActivityWatch/aw-client/tarball/master
+tzlocal
+aw-watcher-project
 Pillow
