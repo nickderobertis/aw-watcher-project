@@ -1,5 +1,6 @@
 from pathlib import Path
-from typing import Union, TypedDict, List
+from typing_extensions import TypedDict
+from typing import Union, List
 
 import yaml
 

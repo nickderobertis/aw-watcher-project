@@ -2,6 +2,8 @@
 # Sphinx configuration is in the docsrc folder
 
 # Main package name
+from pathlib import Path
+
 PACKAGE_NAME = "aw-watcher-project"
 
 # Directory name of package
@@ -56,12 +58,19 @@ PACKAGE_CLASSIFIERS = [
     'Programming Language :: Python :: 3.7'
 ]
 
+AW_CLIENT_PATH = Path(__file__).parent / 'aw-client'
 # Add any third party packages you use in requirements here
 PACKAGE_INSTALL_REQUIRES = [
     # Include the names of the packages and any required versions in as strings
     # e.g.
     # 'package',
     # 'otherpackage>=1,<2'
+    'tzlocal',
+    f'aw-client @ file://{AW_CLIENT_PATH}',
+    'PyYAML',
+    'PySide6',
+    'Pillow',
+    'typing_extensions',
 ]
 
 # Add any third party packages you use in requirements for optional features of your package here
@@ -95,7 +104,7 @@ DOCS_OTHER_MOCK_IMPORTS = [
 
 # Add any Python scripts which should be exposed to the command line in the format:
 # CONSOLE_SCRIPTS = ['funniest-joke=funniest.command_line:main']
-CONSOLE_SCRIPTS = [],
+CONSOLE_SCRIPTS = ['aw-watcher-project=aw_watcher_project.__main__:main'],
 
 # Add any arbitrary scripts to be exposed to the command line in the format:
 # SCRIPTS = ['bin/funniest-joke']

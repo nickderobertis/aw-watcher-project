@@ -1,3 +1,6 @@
+import sys
+import os
+sys.path.insert(0, os.path.dirname(__file__))
 import conf
 from version import __version__
 from setuptools import setup, find_packages
@@ -17,7 +20,6 @@ if conf.PACKAGE_DESCRIPTION.strip().lower() == 'auto':
     with open('README.md', 'r') as f:
         long_description = f.read()
     extra_kwargs['long_description_content_type'] = 'text/markdown'
-
 setup(
     name=conf.PACKAGE_NAME,
     version=__version__,

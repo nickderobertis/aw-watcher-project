@@ -15,13 +15,17 @@ Install `aw-watcher-project`:
 pip install aw-watcher-project
 ```
 
-A simple example:
+If you do not have Qt installed, you will need to install
+that as well. Example for Ubuntu/Debian:
 
-```python
-import aw_watcher_project
-
-# Do something with aw_watcher_project
 ```
+apt-get install qt5-default
+```
+
+See more at: https://doc.qt.io/qtforpython/gettingstarted.html
+
+Run `aw-watcher-project` from the command line to start the system 
+tray application.
 
 ## Links
 

@@ -15,7 +15,6 @@ from aw_client import ActivityWatchClient
 
 from aw_watcher_project.config import ProjectWatcherConfig, BUCKET_NAME
 from aw_watcher_project.logger import logger
-from derobertis_consulting.plbuild.paths import images_path
 
 
 class AddProjectWindow(w.QWidget):

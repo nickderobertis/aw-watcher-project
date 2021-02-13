@@ -1,6 +1,7 @@
 import datetime
 from collections import defaultdict
-from typing import TypedDict, List, Dict, Optional, Tuple
+from typing_extensions import TypedDict
+from typing import List, Dict, Optional, Tuple
 import pytz
 from tzlocal import get_localzone
 
