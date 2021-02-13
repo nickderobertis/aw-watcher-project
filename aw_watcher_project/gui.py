@@ -138,7 +138,7 @@ class ProjectWatcherGUI:
         self.menu.addAction(quit)
         self.tray.setContextMenu(self.menu)
 
-        self.action_group = g.QActionGroup(self.tray, exclusive=True)
+        self.action_group = g.QActionGroup(self.tray, exclusive=True)  # type: ignore
         for project in self.config.projects:
             self._add_project(project)
 
@@ -153,7 +153,7 @@ class ProjectWatcherGUI:
         self._add_project(project)
 
     def _add_project(self, project: str):
-        option = g.QAction(project, checkable=True)
+        option = g.QAction(project, checkable=True)  # type: ignore
         logger.debug(f"Adding project {project} in GUI")
         select_project_func = partial(self._select_project, project)
         option.triggered.connect(select_project_func)
