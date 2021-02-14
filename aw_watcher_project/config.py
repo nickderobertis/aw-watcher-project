@@ -16,6 +16,8 @@ if not DEFAULT_CONFIG_DIR.exists():
     DEFAULT_CONFIG_DIR.mkdir()
 DEFAULT_CONFIG_PATH = DEFAULT_CONFIG_DIR / "config.yml"
 
+ASSETS_PATH = Path(__file__).parent / 'assets'
+
 
 class ConfigData(TypedDict):
     projects: List[str]

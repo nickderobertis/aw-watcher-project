@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=aw-project-watcher
+GenericName=ActivityWatch Project Watcher System Tray
+Comment=System tray to select project and report to ActivityWatch
+Exec=aw-watcher-project
+Hidden=false
+StartupNotify=true
+Terminal=true
+Type=Application
+X-GNOME-Autostart-enabled=true
+X-GNOME-Autostart-Delay=5
+Version=0.2.0
+Categories=Utility;

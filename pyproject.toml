@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aw-watcher-project"
-version = "0.1.0"
+version = "0.2.0"
 description = "System tray app for ActivityWatch to report current project"
 authors = ["Nick DeRobertis <whoopnip@gmail.com>"]
 license = "MIT"
@@ -25,6 +25,9 @@ PyYAML = "^5.4.1"
 PySide6 = "^6.0.1"
 Pillow = "^8.1.0"
 typing-extensions = "^3.7.4"
+typer = "^0.3.2"
+colorama = "^0.4.4"
+shellingham = "^1.4.0"
 
 [tool.poetry.dev-dependencies]
 Sphinx = "^3.4.3"

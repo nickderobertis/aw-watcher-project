@@ -22,7 +22,7 @@ REPO_MAINTAINERS = [
 ]
 
 # Package version in the format (major, minor, release)
-PACKAGE_VERSION_TUPLE = (0, 1, 0)
+PACKAGE_VERSION_TUPLE = (0, 2, 0)
 
 # Short description of the package
 PACKAGE_SHORT_DESCRIPTION = "System tray app for ActivityWatch to report current project"
@@ -70,6 +70,9 @@ PACKAGE_INSTALL_REQUIRES = [
     'Pillow',
     'typing_extensions',
     'aw_client @ https://github.com/ActivityWatch/aw-client/tarball/master',
+    'typer',
+    'colorama',
+    'shellingham',
 ]
 
 # Add any third party packages you use in requirements for optional features of your package here
@@ -103,7 +106,7 @@ DOCS_OTHER_MOCK_IMPORTS = [
 
 # Add any Python scripts which should be exposed to the command line in the format:
 # CONSOLE_SCRIPTS = ['funniest-joke=funniest.command_line:main']
-CONSOLE_SCRIPTS = ['aw-watcher-project=aw_watcher_project.__main__:main'],
+CONSOLE_SCRIPTS = ['aw-watcher-project=aw_watcher_project.__main__:app'],
 
 # Add any arbitrary scripts to be exposed to the command line in the format:
 # SCRIPTS = ['bin/funniest-joke']

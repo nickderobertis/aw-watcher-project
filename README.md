@@ -27,6 +27,11 @@ See more at: https://doc.qt.io/qtforpython/gettingstarted.html
 Run `aw-watcher-project` from the command line to start the system 
 tray application.
 
+Use `aw-watcher-project autostart bootstrap` to automatically 
+start the application on log in.
+
+See `aw-watcher-project --help` for more options.
+
 ## Links
 
 See the
