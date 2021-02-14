@@ -1,10 +1,10 @@
-typer
-Pillow
+PyYAML
+aw_client @ https://github.com/ActivityWatch/aw-client/tarball/master
+colorama
+aw-watcher-project
 PySide6
 shellingham
-colorama
-aw_client @ https://github.com/ActivityWatch/aw-client/tarball/master
 tzlocal
-aw-watcher-project
+Pillow
+typer
 typing_extensions
-PyYAML
