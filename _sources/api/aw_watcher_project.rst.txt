@@ -17,6 +17,14 @@ aw\_watcher\_project.app module
    :undoc-members:
    :show-inheritance:
 
+aw\_watcher\_project.autostart module
+-------------------------------------
+
+.. automodule:: aw_watcher_project.autostart
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 aw\_watcher\_project.config module
 ----------------------------------
 

@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>aw_watcher_project.config &mdash; aw-watcher-project 0.1.0 documentation</title>
+  <title>aw_watcher_project.config &mdash; aw-watcher-project 0.2.0 documentation</title>
   
 
   
@@ -71,7 +71,7 @@
             
             
               <div class="version">
-                0.1.0
+                0.2.0
               </div>
             
           
@@ -187,6 +187,8 @@
 <span class="k">if</span> <span class="ow">not</span> <span class="n">DEFAULT_CONFIG_DIR</span><span class="o">.</span><span class="n">exists</span><span class="p">():</span>
     <span class="n">DEFAULT_CONFIG_DIR</span><span class="o">.</span><span class="n">mkdir</span><span class="p">()</span>
 <span class="n">DEFAULT_CONFIG_PATH</span> <span class="o">=</span> <span class="n">DEFAULT_CONFIG_DIR</span> <span class="o">/</span> <span class="s2">&quot;config.yml&quot;</span>
+
+<span class="n">ASSETS_PATH</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span><span class="o">.</span><span class="n">parent</span> <span class="o">/</span> <span class="s1">&#39;assets&#39;</span>
 
 
 <div class="viewcode-block" id="ConfigData"><a class="viewcode-back" href="../../api/aw_watcher_project.html#aw_watcher_project.config.ConfigData">[docs]</a><span class="k">class</span> <span class="nc">ConfigData</span><span class="p">(</span><span class="n">TypedDict</span><span class="p">):</span>
