@@ -55,7 +55,7 @@ def bootstrap_autostart():
     os_name = check_os()
     if os_name == "Linux":
         _bootstrap_autostart_linux()
-    # TODO: implement Windows and Mac autostart bootstrap
+    # TODO [$602952c99a86cd000afc91c1]: implement Windows and Mac autostart bootstrap
 
 
 @app.command(name="remove")
@@ -66,7 +66,7 @@ def remove_autostart():
     os_name = check_os()
     if os_name == "Linux":
         _remove_autostart_linux()
-    # TODO: implement Windows and Mac remove autostart
+    # TODO [$602952c99a86cd000afc91c2]: implement Windows and Mac remove autostart
 
 
 if __name__ == "__main__":
