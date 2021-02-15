@@ -8,6 +8,7 @@ from tzlocal import get_localzone
 from aw_client import ActivityWatchClient
 
 from aw_watcher_project.config import BUCKET_NAME
+from aw_watcher_project.exc import ProjectDoesNotExistException
 
 
 class ProjectData(TypedDict):
@@ -24,6 +25,9 @@ class ProjectEventData(TypedDict):
 class ProjectEvent:
     def __init__(self, data: ProjectEventData):
         self.data = data
+
+    def __repr__(self) -> str:
+        return f'<ProjectEvent(project={self.project}, time={self.time}, duration={self.duration})>'
 
     @property
     def duration(self) -> float:
@@ -80,6 +84,13 @@ def start_end_durations_by_project(
     return dict(time_data)
 
 
+def events_by_project(events: List[ProjectEvent]) -> Dict[str, List[ProjectEvent]]:
+    events_dict: Dict[str, List[ProjectEvent]] = defaultdict(lambda: [])
+    for event in events:
+        events_dict[event.project].append(event)
+    return dict(events_dict)
+
+
 class ProjectEvents:
     def __init__(self, events: List[ProjectEventData]):
         self.events = [ProjectEvent(event) for event in events]
@@ -97,6 +108,16 @@ class ProjectEvents:
         self,
     ) -> Dict[str, List[Tuple[datetime.datetime, datetime.datetime, float]]]:
         return start_end_durations_by_project(self.events)
+
+    def events_by_project(self) -> Dict[str, List[ProjectEvent]]:
+        return events_by_project(self.events)
+
+    def events_for_project(self, project: str) -> List[ProjectEvent]:
+        events_dict = self.events_by_project()
+        try:
+            return events_dict[project]
+        except KeyError:
+            raise ProjectDoesNotExistException(project)
 
 
 def get_begin_time(bucket_name: str = BUCKET_NAME) -> datetime.datetime:

@@ -8,3 +8,7 @@ class CannotAddProjectException(ConfigException):
 
 class CannotRemoveProjectException(ConfigException):
     pass
+
+
+class ProjectDoesNotExistException(ValueError):
+    pass
