@@ -1,10 +1,10 @@
 PyYAML
-aw_client @ https://github.com/ActivityWatch/aw-client/tarball/master
-colorama
 aw-watcher-project
 PySide6
-shellingham
-tzlocal
-Pillow
+aw_client @ https://github.com/ActivityWatch/aw-client/tarball/master
 typer
+shellingham
+Pillow
+colorama
+tzlocal
 typing_extensions

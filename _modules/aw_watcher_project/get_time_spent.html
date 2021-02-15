@@ -180,6 +180,7 @@
 <span class="kn">from</span> <span class="nn">aw_client</span> <span class="kn">import</span> <span class="n">ActivityWatchClient</span>
 
 <span class="kn">from</span> <span class="nn">aw_watcher_project.config</span> <span class="kn">import</span> <span class="n">BUCKET_NAME</span>
+<span class="kn">from</span> <span class="nn">aw_watcher_project.exc</span> <span class="kn">import</span> <span class="n">ProjectDoesNotExistException</span>
 
 
 <div class="viewcode-block" id="ProjectData"><a class="viewcode-back" href="../../api/aw_watcher_project.html#aw_watcher_project.get_time_spent.ProjectData">[docs]</a><span class="k">class</span> <span class="nc">ProjectData</span><span class="p">(</span><span class="n">TypedDict</span><span class="p">):</span>
@@ -196,6 +197,9 @@
 <div class="viewcode-block" id="ProjectEvent"><a class="viewcode-back" href="../../api/aw_watcher_project.html#aw_watcher_project.get_time_spent.ProjectEvent">[docs]</a><span class="k">class</span> <span class="nc">ProjectEvent</span><span class="p">:</span>
 <div class="viewcode-block" id="ProjectEvent.__init__"><a class="viewcode-back" href="../../api/aw_watcher_project.html#aw_watcher_project.get_time_spent.ProjectEvent.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">data</span><span class="p">:</span> <span class="n">ProjectEventData</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span></div>
+
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">&#39;&lt;ProjectEvent(project=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">project</span><span class="si">}</span><span class="s1">, time=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">time</span><span class="si">}</span><span class="s1">, duration=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">duration</span><span class="si">}</span><span class="s1">)&gt;&#39;</span>
 
     <span class="nd">@property</span>
     <span class="k">def</span> <span class="nf">duration</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
@@ -252,6 +256,13 @@
     <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">time_data</span><span class="p">)</span></div>
 
 
+<div class="viewcode-block" id="events_by_project"><a class="viewcode-back" href="../../api/aw_watcher_project.html#aw_watcher_project.get_time_spent.events_by_project">[docs]</a><span class="k">def</span> <span class="nf">events_by_project</span><span class="p">(</span><span class="n">events</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">ProjectEvent</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">ProjectEvent</span><span class="p">]]:</span>
+    <span class="n">events_dict</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">ProjectEvent</span><span class="p">]]</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="k">lambda</span><span class="p">:</span> <span class="p">[])</span>
+    <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">events</span><span class="p">:</span>
+        <span class="n">events_dict</span><span class="p">[</span><span class="n">event</span><span class="o">.</span><span class="n">project</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">event</span><span class="p">)</span>
+    <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span><span class="n">events_dict</span><span class="p">)</span></div>
+
+
 <div class="viewcode-block" id="ProjectEvents"><a class="viewcode-back" href="../../api/aw_watcher_project.html#aw_watcher_project.get_time_spent.ProjectEvents">[docs]</a><span class="k">class</span> <span class="nc">ProjectEvents</span><span class="p">:</span>
 <div class="viewcode-block" id="ProjectEvents.__init__"><a class="viewcode-back" href="../../api/aw_watcher_project.html#aw_watcher_project.get_time_spent.ProjectEvents.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">events</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="n">ProjectEventData</span><span class="p">]):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">events</span> <span class="o">=</span> <span class="p">[</span><span class="n">ProjectEvent</span><span class="p">(</span><span class="n">event</span><span class="p">)</span> <span class="k">for</span> <span class="n">event</span> <span class="ow">in</span> <span class="n">events</span><span class="p">]</span></div>
@@ -268,7 +279,17 @@
 <div class="viewcode-block" id="ProjectEvents.start_end_durations_by_project"><a class="viewcode-back" href="../../api/aw_watcher_project.html#aw_watcher_project.get_time_spent.ProjectEvents.start_end_durations_by_project">[docs]</a>    <span class="k">def</span> <span class="nf">start_end_durations_by_project</span><span class="p">(</span>
         <span class="bp">self</span><span class="p">,</span>
     <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">Tuple</span><span class="p">[</span><span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">,</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">,</span> <span class="nb">float</span><span class="p">]]]:</span>
-        <span class="k">return</span> <span class="n">start_end_durations_by_project</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">events</span><span class="p">)</span></div></div>
+        <span class="k">return</span> <span class="n">start_end_durations_by_project</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">events</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ProjectEvents.events_by_project"><a class="viewcode-back" href="../../api/aw_watcher_project.html#aw_watcher_project.get_time_spent.ProjectEvents.events_by_project">[docs]</a>    <span class="k">def</span> <span class="nf">events_by_project</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">List</span><span class="p">[</span><span class="n">ProjectEvent</span><span class="p">]]:</span>
+        <span class="k">return</span> <span class="n">events_by_project</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">events</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ProjectEvents.events_for_project"><a class="viewcode-back" href="../../api/aw_watcher_project.html#aw_watcher_project.get_time_spent.ProjectEvents.events_for_project">[docs]</a>    <span class="k">def</span> <span class="nf">events_for_project</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">project</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">ProjectEvent</span><span class="p">]:</span>
+        <span class="n">events_dict</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">events_by_project</span><span class="p">()</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">events_dict</span><span class="p">[</span><span class="n">project</span><span class="p">]</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="n">ProjectDoesNotExistException</span><span class="p">(</span><span class="n">project</span><span class="p">)</span></div></div>
 
 
 <div class="viewcode-block" id="get_begin_time"><a class="viewcode-back" href="../../api/aw_watcher_project.html#aw_watcher_project.get_time_spent.get_begin_time">[docs]</a><span class="k">def</span> <span class="nf">get_begin_time</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">BUCKET_NAME</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">:</span>

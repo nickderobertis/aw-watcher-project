@@ -315,6 +315,12 @@ automatically from next log in</p>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#Exception" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
 </dd></dl>
 
+<dl class="py exception">
+<dt id="aw_watcher_project.exc.ProjectDoesNotExistException">
+<em class="property">exception </em><code class="sig-prename descclassname">aw_watcher_project.exc.</code><code class="sig-name descname">ProjectDoesNotExistException</code><a class="reference internal" href="../_modules/aw_watcher_project/exc.html#ProjectDoesNotExistException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.exc.ProjectDoesNotExistException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ValueError</span></code></a></p>
+</dd></dl>
+
 </div>
 <div class="section" id="module-aw_watcher_project.get_time_spent">
 <span id="aw-watcher-project-get-time-spent-module"></span><h2>aw_watcher_project.get_time_spent module<a class="headerlink" href="#module-aw_watcher_project.get_time_spent" title="Permalink to this headline">¶</a></h2>
@@ -458,6 +464,26 @@ automatically from next log in</p>
 </dd></dl>
 
 <dl class="py method">
+<dt id="aw_watcher_project.get_time_spent.ProjectEvents.events_by_project">
+<code class="sig-name descname">events_by_project</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/get_time_spent.html#ProjectEvents.events_by_project"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.get_time_spent.ProjectEvents.events_by_project" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference internal" href="#aw_watcher_project.get_time_spent.ProjectEvent" title="aw_watcher_project.get_time_spent.ProjectEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProjectEvent</span></code></a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aw_watcher_project.get_time_spent.ProjectEvents.events_for_project">
+<code class="sig-name descname">events_for_project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/get_time_spent.html#ProjectEvents.events_for_project"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.get_time_spent.ProjectEvents.events_for_project" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference internal" href="#aw_watcher_project.get_time_spent.ProjectEvent" title="aw_watcher_project.get_time_spent.ProjectEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProjectEvent</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt id="aw_watcher_project.get_time_spent.ProjectEvents.start_end_durations_by_project">
 <code class="sig-name descname">start_end_durations_by_project</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/get_time_spent.html#ProjectEvents.start_end_durations_by_project"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.get_time_spent.ProjectEvents.start_end_durations_by_project" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
@@ -485,6 +511,16 @@ automatically from next log in</p>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Return type</dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="aw_watcher_project.get_time_spent.events_by_project">
+<code class="sig-prename descclassname">aw_watcher_project.get_time_spent.</code><code class="sig-name descname">events_by_project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">events</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/get_time_spent.html#events_by_project"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.get_time_spent.events_by_project" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference internal" href="#aw_watcher_project.get_time_spent.ProjectEvent" title="aw_watcher_project.get_time_spent.ProjectEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProjectEvent</span></code></a>]]</p>
 </dd>
 </dl>
 </dd></dl>
