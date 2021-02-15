@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aw-watcher-project"
-version = "0.2.0"
+version = "0.2.1"
 description = "System tray app for ActivityWatch to report current project"
 authors = ["Nick DeRobertis <whoopnip@gmail.com>"]
 license = "MIT"

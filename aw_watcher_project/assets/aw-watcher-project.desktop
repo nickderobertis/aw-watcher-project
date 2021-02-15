@@ -9,5 +9,5 @@ Terminal=true
 Type=Application
 X-GNOME-Autostart-enabled=true
 X-GNOME-Autostart-Delay=5
-Version=0.2.0
+Version=0.2.1
 Categories=Utility;
