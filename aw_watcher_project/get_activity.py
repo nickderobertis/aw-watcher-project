@@ -56,4 +56,6 @@ def get_activity(
 
 
 if __name__ == '__main__':
-    print(get_activity('awproject-watcher'))
+    begin = datetime.datetime(2021, 2, 22)
+    resp = get_activity('awproject-watcher', begin=begin, activity_buckets=('aw-watcher-window_',))
+    print(resp[0]['aw_watcher_window_events'][0])

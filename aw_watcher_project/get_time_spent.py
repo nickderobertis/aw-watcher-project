@@ -5,7 +5,7 @@ from tzlocal import get_localzone
 from aw_client import ActivityWatchClient
 
 from aw_watcher_project.aw_time import get_begin_time, get_default_end_time
-from aw_watcher_project.events import ProjectEventData, ProjectEvents
+from aw_watcher_project.events.project import ProjectEventData, ProjectEvents
 
 
 def get_events(
