@@ -1,11 +1,12 @@
 import datetime
-from typing import Optional, Sequence
+from typing import Optional, Sequence, List
 
 from aw_client import ActivityWatchClient
 
 from aw_watcher_project.aw_time import get_begin_time, get_default_end_time
+from aw_watcher_project.events.activity import Activity, ActivityData
 
-DEFAULT_ACTIVITY_BUCKETS = ('aw-watcher-window_', 'aw-watcher-vscode_', 'aw-watcher-PyCharmCore_', 'aw-watcher-web-chrome')
+DEFAULT_ACTIVITY_BUCKETS = ('aw-watcher-window_',)
 
 
 def _bucket_name_to_event_name(name: str) -> str:
@@ -43,7 +44,7 @@ project_events = filter_period_intersect(project_events, filter_keyvals(afk_even
 def get_activity(
     project: str, begin: Optional[datetime.datetime] = None, end: Optional[datetime.datetime] = None,
     activity_buckets: Sequence[str] = DEFAULT_ACTIVITY_BUCKETS
-):
+) -> Activity:
     if begin is None:
         begin = get_begin_time()
     if end is None:
@@ -51,11 +52,11 @@ def get_activity(
     time_periods = [(begin, end)]
     client = ActivityWatchClient()
     query = _get_activity_query(project, activity_buckets)
-    events = client.query(query, time_periods)
-    return events
+    events: List[ActivityData] = client.query(query, time_periods)
+    return Activity(events[0]['aw_watcher_window_events'])
 
 
 if __name__ == '__main__':
     begin = datetime.datetime(2021, 2, 22)
-    resp = get_activity('awproject-watcher', begin=begin, activity_buckets=('aw-watcher-window_',))
-    print(resp[0]['aw_watcher_window_events'][0])
+    resp = get_activity('awproject-watcher', begin=begin)
+    print(resp.events)
