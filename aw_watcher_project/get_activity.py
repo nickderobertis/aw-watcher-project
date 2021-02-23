@@ -57,6 +57,9 @@ def get_activity(
 
 
 if __name__ == '__main__':
-    begin = datetime.datetime(2021, 2, 22)
-    resp = get_activity('awproject-watcher', begin=begin)
+    begin = datetime.datetime(2021, 2, 15)
+    end = datetime.datetime(2021, 2, 18)
+    resp = get_activity('awproject-watcher', begin=begin, end=end)
     print(resp.events)
+    print('\n')
+    print('\n'.join(set(resp.for_app('jetbrains-pycharm-ce').titles)))

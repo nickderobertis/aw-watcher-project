@@ -13,3 +13,17 @@ class Activity:
 
     def __getitem__(self, item) -> WindowEvent:
         return self.events[item]
+
+    @classmethod
+    def from_events(cls, events: List[WindowEvent]):
+        obj = cls([])
+        obj.events = events
+        return obj
+
+    def for_app(self, name: str) -> 'Activity':
+        events = [event for event in self if event.app == name]
+        return self.__class__.from_events(events)
+
+    @property
+    def titles(self) -> List[str]:
+        return [event.title for event in self]
