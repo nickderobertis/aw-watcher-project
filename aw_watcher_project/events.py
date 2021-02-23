@@ -7,31 +7,30 @@ from typing_extensions import TypedDict
 from aw_watcher_project.exc import ProjectDoesNotExistException
 
 
+class AllEventData(TypedDict):
+    id: int
+    timestamp: str
+    duration: float
+
+
 class ProjectData(TypedDict):
     project: str
 
 
-class ProjectEventData(TypedDict):
-    id: int
-    timestamp: str
-    duration: float
+class ProjectEventData(AllEventData):
     data: ProjectData
 
 
-class ProjectEvent:
-    def __init__(self, data: ProjectEventData):
+class Event:
+    def __init__(self, data: AllEventData):
         self.data = data
 
     def __repr__(self) -> str:
-        return f'<ProjectEvent(project={self.project}, time={self.time}, duration={self.duration})>'
+        return f"<Event(time={self.time}, duration={self.duration})>"
 
     @property
     def duration(self) -> float:
         return self.data["duration"]
-
-    @property
-    def project(self) -> str:
-        return self.data["data"]["project"]
 
     @property
     def time(self) -> datetime.datetime:
@@ -48,6 +47,20 @@ class ProjectEvent:
     @property
     def start_end_duration(self) -> Tuple[datetime.datetime, datetime.datetime, float]:
         return self.time, self.end_time, self.duration
+
+
+class ProjectEvent(Event):
+    data: ProjectEventData
+
+    def __init__(self, data: ProjectEventData):
+        super().__init__(data)
+
+    def __repr__(self) -> str:
+        return f"<ProjectEvent(project={self.project}, time={self.time}, duration={self.duration})>"
+
+    @property
+    def project(self) -> str:
+        return self.data["data"]["project"]
 
 
 def duration_by_project(events: List[ProjectEvent]) -> Dict[str, float]:
