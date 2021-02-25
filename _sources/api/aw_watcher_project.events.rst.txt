@@ -1,0 +1,43 @@
+aw\_watcher\_project.events package
+===================================
+
+.. automodule:: aw_watcher_project.events
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Submodules
+----------
+
+aw\_watcher\_project.events.activity module
+-------------------------------------------
+
+.. automodule:: aw_watcher_project.events.activity
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aw\_watcher\_project.events.base module
+---------------------------------------
+
+.. automodule:: aw_watcher_project.events.base
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aw\_watcher\_project.events.project module
+------------------------------------------
+
+.. automodule:: aw_watcher_project.events.project
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aw\_watcher\_project.events.window module
+-----------------------------------------
+
+.. automodule:: aw_watcher_project.events.window
+   :members:
+   :undoc-members:
+   :show-inheritance:
+

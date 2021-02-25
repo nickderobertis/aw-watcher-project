@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>aw_watcher_project.exc &mdash; aw-watcher-project 0.3.0 documentation</title>
+  <title>aw_watcher_project.aw_time &mdash; aw-watcher-project 0.3.0 documentation</title>
   
 
   
@@ -28,7 +28,7 @@
   
 
   
-    <link rel="canonical" href="https://nickderobertis.github.io/aw-watcher-project/_modules/aw_watcher_project/exc.html" />
+    <link rel="canonical" href="https://nickderobertis.github.io/aw-watcher-project/_modules/aw_watcher_project/aw_time.html" />
 
   
   <!--[if lt IE 9]>
@@ -154,7 +154,7 @@
         
           <li><a href="../index.html">Module code</a> &raquo;</li>
         
-      <li>aw_watcher_project.exc</li>
+      <li>aw_watcher_project.aw_time</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -169,21 +169,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <h1>Source code for aw_watcher_project.exc</h1><div class="highlight"><pre>
-<div class="viewcode-block" id="ConfigException"><a class="viewcode-back" href="../../api/aw_watcher_project.html#aw_watcher_project.exc.ConfigException">[docs]</a><span></span><span class="k">class</span> <span class="nc">ConfigException</span><span class="p">(</span><span class="ne">Exception</span><span class="p">):</span>
-    <span class="k">pass</span></div>
+  <h1>Source code for aw_watcher_project.aw_time</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="kn">from</span> <span class="nn">aw_client</span> <span class="kn">import</span> <span class="n">ActivityWatchClient</span>
+<span class="kn">from</span> <span class="nn">tzlocal</span> <span class="kn">import</span> <span class="n">get_localzone</span>
+
+<span class="kn">from</span> <span class="nn">aw_watcher_project.config</span> <span class="kn">import</span> <span class="n">BUCKET_NAME</span>
 
 
-<div class="viewcode-block" id="CannotAddProjectException"><a class="viewcode-back" href="../../api/aw_watcher_project.html#aw_watcher_project.exc.CannotAddProjectException">[docs]</a><span class="k">class</span> <span class="nc">CannotAddProjectException</span><span class="p">(</span><span class="n">ConfigException</span><span class="p">):</span>
-    <span class="k">pass</span></div>
+<div class="viewcode-block" id="get_begin_time"><a class="viewcode-back" href="../../api/aw_watcher_project.html#aw_watcher_project.aw_time.get_begin_time">[docs]</a><span class="k">def</span> <span class="nf">get_begin_time</span><span class="p">(</span><span class="n">bucket_name</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="n">BUCKET_NAME</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">:</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">ActivityWatchClient</span><span class="p">()</span>
+    <span class="n">buckets</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_buckets</span><span class="p">()</span>
+    <span class="n">selected_bucket</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="k">for</span> <span class="n">bucket</span> <span class="ow">in</span> <span class="n">buckets</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">bucket</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="n">bucket_name</span> <span class="o">+</span> <span class="s2">&quot;_&quot;</span> <span class="o">+</span> <span class="n">bucket</span><span class="p">[</span><span class="s2">&quot;hostname&quot;</span><span class="p">]:</span>
+            <span class="n">selected_bucket</span> <span class="o">=</span> <span class="n">bucket</span>
+    <span class="k">if</span> <span class="n">selected_bucket</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;bucket </span><span class="si">{</span><span class="n">bucket_name</span><span class="si">}</span><span class="s2"> does not exist, run project watcher&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">fromisoformat</span><span class="p">(</span><span class="n">selected_bucket</span><span class="p">[</span><span class="s2">&quot;created&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span>
+        <span class="n">tzinfo</span><span class="o">=</span><span class="n">get_localzone</span><span class="p">(),</span> <span class="n">hour</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">0</span>
+    <span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="CannotRemoveProjectException"><a class="viewcode-back" href="../../api/aw_watcher_project.html#aw_watcher_project.exc.CannotRemoveProjectException">[docs]</a><span class="k">class</span> <span class="nc">CannotRemoveProjectException</span><span class="p">(</span><span class="n">ConfigException</span><span class="p">):</span>
-    <span class="k">pass</span></div>
-
-
-<div class="viewcode-block" id="ProjectDoesNotExistException"><a class="viewcode-back" href="../../api/aw_watcher_project.html#aw_watcher_project.exc.ProjectDoesNotExistException">[docs]</a><span class="k">class</span> <span class="nc">ProjectDoesNotExistException</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">):</span>
-    <span class="k">pass</span></div>
+<div class="viewcode-block" id="get_default_end_time"><a class="viewcode-back" href="../../api/aw_watcher_project.html#aw_watcher_project.aw_time.get_default_end_time">[docs]</a><span class="k">def</span> <span class="nf">get_default_end_time</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span>
+        <span class="n">tzinfo</span><span class="o">=</span><span class="n">get_localzone</span><span class="p">(),</span> <span class="n">hour</span><span class="o">=</span><span class="mi">23</span><span class="p">,</span> <span class="n">minute</span><span class="o">=</span><span class="mi">59</span><span class="p">,</span> <span class="n">second</span><span class="o">=</span><span class="mi">59</span>
+    <span class="p">)</span></div>
 </pre></div>
 
            </div>

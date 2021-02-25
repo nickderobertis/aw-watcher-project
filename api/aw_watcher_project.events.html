@@ -1,0 +1,653 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>aw_watcher_project.events package &mdash; aw-watcher-project 0.3.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/copybutton.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sphinx_paramlinks.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-binder.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-dataframe.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/gallery-rendered-html.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+    <link rel="canonical" href="https://nickderobertis.github.io/aw-watcher-project/api/aw_watcher_project.events.html" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/clipboard.min.js"></script>
+        <script src="../_static/copybutton.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="aw_watcher_project package" href="aw_watcher_project.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> aw-watcher-project
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Main">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Tutorial</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Getting started with aw-watcher-project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../auto_examples/index.html">This is my gallery</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">aw_watcher_project</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="aw_watcher_project.html">aw_watcher_project package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="aw_watcher_project.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">aw_watcher_project.events package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="aw_watcher_project.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aw_watcher_project.html#module-aw_watcher_project.app">aw_watcher_project.app module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aw_watcher_project.html#module-aw_watcher_project.autostart">aw_watcher_project.autostart module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aw_watcher_project.html#module-aw_watcher_project.aw_time">aw_watcher_project.aw_time module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aw_watcher_project.html#module-aw_watcher_project.config">aw_watcher_project.config module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aw_watcher_project.html#module-aw_watcher_project.exc">aw_watcher_project.exc module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aw_watcher_project.html#module-aw_watcher_project.get_activity">aw_watcher_project.get_activity module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aw_watcher_project.html#module-aw_watcher_project.get_time_spent">aw_watcher_project.get_time_spent module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aw_watcher_project.html#module-aw_watcher_project.gui">aw_watcher_project.gui module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="aw_watcher_project.html#module-aw_watcher_project.logger">aw_watcher_project.logger module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="Top">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">aw-watcher-project</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="Breadcrumbs">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">aw_watcher_project</a> &raquo;</li>
+        
+          <li><a href="aw_watcher_project.html">aw_watcher_project package</a> &raquo;</li>
+        
+      <li>aw_watcher_project.events package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/aw_watcher_project.events.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-aw_watcher_project.events">
+<span id="aw-watcher-project-events-package"></span><h1>aw_watcher_project.events package<a class="headerlink" href="#module-aw_watcher_project.events" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-aw_watcher_project.events.activity">
+<span id="aw-watcher-project-events-activity-module"></span><h2>aw_watcher_project.events.activity module<a class="headerlink" href="#module-aw_watcher_project.events.activity" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="aw_watcher_project.events.activity.Activity">
+<em class="property">class </em><code class="sig-prename descclassname">aw_watcher_project.events.activity.</code><code class="sig-name descname">Activity</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">events</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/activity.html#Activity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.activity.Activity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="aw_watcher_project.events.activity.Activity.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">events</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/activity.html#Activity.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.activity.Activity.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aw_watcher_project.events.activity.Activity.for_app">
+<code class="sig-name descname">for_app</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/activity.html#Activity.for_app"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.activity.Activity.for_app" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="#aw_watcher_project.events.activity.Activity" title="aw_watcher_project.events.activity.Activity"><code class="xref py py-class docutils literal notranslate"><span class="pre">Activity</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aw_watcher_project.events.activity.Activity.from_events">
+<em class="property">classmethod </em><code class="sig-name descname">from_events</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">events</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/activity.html#Activity.from_events"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.activity.Activity.from_events" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="aw_watcher_project.events.activity.Activity.titles">
+<em class="property">property </em><code class="sig-name descname">titles</code><a class="headerlink" href="#aw_watcher_project.events.activity.Activity.titles" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="aw_watcher_project.events.activity.ActivityData">
+<em class="property">class </em><code class="sig-prename descclassname">aw_watcher_project.events.activity.</code><code class="sig-name descname">ActivityData</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/activity.html#ActivityData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.activity.ActivityData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+<dl class="py attribute">
+<dt id="aw_watcher_project.events.activity.ActivityData.aw_watcher_window_events">
+<code class="sig-name descname">aw_watcher_window_events</code><em class="property">: List<span class="p">[</span><a class="reference internal" href="#aw_watcher_project.events.window.WindowEventData" title="aw_watcher_project.events.window.WindowEventData">aw_watcher_project.events.window.WindowEventData</a><span class="p">]</span></em><a class="headerlink" href="#aw_watcher_project.events.activity.ActivityData.aw_watcher_window_events" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-aw_watcher_project.events.base">
+<span id="aw-watcher-project-events-base-module"></span><h2>aw_watcher_project.events.base module<a class="headerlink" href="#module-aw_watcher_project.events.base" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="aw_watcher_project.events.base.AllEventData">
+<em class="property">class </em><code class="sig-prename descclassname">aw_watcher_project.events.base.</code><code class="sig-name descname">AllEventData</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">_typename</span></em>, <em class="sig-param"><span class="n">_fields</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">/</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/base.html#AllEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.base.AllEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+<dl class="py attribute">
+<dt id="aw_watcher_project.events.base.AllEventData.duration">
+<code class="sig-name descname">duration</code><em class="property">: <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)">float</a></em><a class="headerlink" href="#aw_watcher_project.events.base.AllEventData.duration" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="aw_watcher_project.events.base.AllEventData.id">
+<code class="sig-name descname">id</code><em class="property">: <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a></em><a class="headerlink" href="#aw_watcher_project.events.base.AllEventData.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="aw_watcher_project.events.base.AllEventData.timestamp">
+<code class="sig-name descname">timestamp</code><em class="property">: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></em><a class="headerlink" href="#aw_watcher_project.events.base.AllEventData.timestamp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="aw_watcher_project.events.base.Event">
+<em class="property">class </em><code class="sig-prename descclassname">aw_watcher_project.events.base.</code><code class="sig-name descname">Event</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/base.html#Event"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.base.Event" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="aw_watcher_project.events.base.Event.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/base.html#Event.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.base.Event.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aw_watcher_project.events.base.Event.day">
+<em class="property">property </em><code class="sig-name descname">day</code><a class="headerlink" href="#aw_watcher_project.events.base.Event.day" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.date" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">date</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aw_watcher_project.events.base.Event.duration">
+<em class="property">property </em><code class="sig-name descname">duration</code><a class="headerlink" href="#aw_watcher_project.events.base.Event.duration" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aw_watcher_project.events.base.Event.end_time">
+<em class="property">property </em><code class="sig-name descname">end_time</code><a class="headerlink" href="#aw_watcher_project.events.base.Event.end_time" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aw_watcher_project.events.base.Event.start_end_duration">
+<em class="property">property </em><code class="sig-name descname">start_end_duration</code><a class="headerlink" href="#aw_watcher_project.events.base.Event.start_end_duration" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Tuple" title="(in Python v3.9)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aw_watcher_project.events.base.Event.time">
+<em class="property">property </em><code class="sig-name descname">time</code><a class="headerlink" href="#aw_watcher_project.events.base.Event.time" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-aw_watcher_project.events.project">
+<span id="aw-watcher-project-events-project-module"></span><h2>aw_watcher_project.events.project module<a class="headerlink" href="#module-aw_watcher_project.events.project" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="aw_watcher_project.events.project.ProjectData">
+<em class="property">class </em><code class="sig-prename descclassname">aw_watcher_project.events.project.</code><code class="sig-name descname">ProjectData</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">_typename</span></em>, <em class="sig-param"><span class="n">_fields</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">/</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/project.html#ProjectData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.project.ProjectData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+<dl class="py attribute">
+<dt id="aw_watcher_project.events.project.ProjectData.project">
+<code class="sig-name descname">project</code><em class="property">: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></em><a class="headerlink" href="#aw_watcher_project.events.project.ProjectData.project" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="aw_watcher_project.events.project.ProjectEvent">
+<em class="property">class </em><code class="sig-prename descclassname">aw_watcher_project.events.project.</code><code class="sig-name descname">ProjectEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/project.html#ProjectEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.project.ProjectEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aw_watcher_project.events.base.Event" title="aw_watcher_project.events.base.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">aw_watcher_project.events.base.Event</span></code></a></p>
+<dl class="py method">
+<dt id="aw_watcher_project.events.project.ProjectEvent.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/project.html#ProjectEvent.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.project.ProjectEvent.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="aw_watcher_project.events.project.ProjectEvent.data">
+<code class="sig-name descname">data</code><em class="property">: <a class="reference internal" href="#aw_watcher_project.events.project.ProjectEventData" title="aw_watcher_project.events.project.ProjectEventData">aw_watcher_project.events.project.ProjectEventData</a></em><a class="headerlink" href="#aw_watcher_project.events.project.ProjectEvent.data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="aw_watcher_project.events.project.ProjectEvent.project">
+<em class="property">property </em><code class="sig-name descname">project</code><a class="headerlink" href="#aw_watcher_project.events.project.ProjectEvent.project" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="aw_watcher_project.events.project.ProjectEventData">
+<em class="property">class </em><code class="sig-prename descclassname">aw_watcher_project.events.project.</code><code class="sig-name descname">ProjectEventData</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">_typename</span></em>, <em class="sig-param"><span class="n">_fields</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">/</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/project.html#ProjectEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.project.ProjectEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+<dl class="py attribute">
+<dt id="aw_watcher_project.events.project.ProjectEventData.data">
+<code class="sig-name descname">data</code><em class="property">: <a class="reference internal" href="#aw_watcher_project.events.project.ProjectData" title="aw_watcher_project.events.project.ProjectData">aw_watcher_project.events.project.ProjectData</a></em><a class="headerlink" href="#aw_watcher_project.events.project.ProjectEventData.data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="aw_watcher_project.events.project.ProjectEventData.duration">
+<code class="sig-name descname">duration</code><em class="property">: <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)">float</a></em><a class="headerlink" href="#aw_watcher_project.events.project.ProjectEventData.duration" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="aw_watcher_project.events.project.ProjectEventData.id">
+<code class="sig-name descname">id</code><em class="property">: <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a></em><a class="headerlink" href="#aw_watcher_project.events.project.ProjectEventData.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="aw_watcher_project.events.project.ProjectEventData.timestamp">
+<code class="sig-name descname">timestamp</code><em class="property">: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></em><a class="headerlink" href="#aw_watcher_project.events.project.ProjectEventData.timestamp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="aw_watcher_project.events.project.ProjectEvents">
+<em class="property">class </em><code class="sig-prename descclassname">aw_watcher_project.events.project.</code><code class="sig-name descname">ProjectEvents</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">events</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/project.html#ProjectEvents"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.project.ProjectEvents" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="aw_watcher_project.events.project.ProjectEvents.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">events</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/project.html#ProjectEvents.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.project.ProjectEvents.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aw_watcher_project.events.project.ProjectEvents.duration_by_day_by_project">
+<code class="sig-name descname">duration_by_day_by_project</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/project.html#ProjectEvents.duration_by_day_by_project"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.project.ProjectEvents.duration_by_day_by_project" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.date" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">date</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aw_watcher_project.events.project.ProjectEvents.duration_by_project">
+<code class="sig-name descname">duration_by_project</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/project.html#ProjectEvents.duration_by_project"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.project.ProjectEvents.duration_by_project" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aw_watcher_project.events.project.ProjectEvents.events_by_project">
+<code class="sig-name descname">events_by_project</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/project.html#ProjectEvents.events_by_project"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.project.ProjectEvents.events_by_project" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference internal" href="#aw_watcher_project.events.project.ProjectEvent" title="aw_watcher_project.events.project.ProjectEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProjectEvent</span></code></a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aw_watcher_project.events.project.ProjectEvents.events_for_project">
+<code class="sig-name descname">events_for_project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">project</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/project.html#ProjectEvents.events_for_project"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.project.ProjectEvents.events_for_project" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference internal" href="#aw_watcher_project.events.project.ProjectEvent" title="aw_watcher_project.events.project.ProjectEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProjectEvent</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aw_watcher_project.events.project.ProjectEvents.start_end_durations_by_project">
+<code class="sig-name descname">start_end_durations_by_project</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/project.html#ProjectEvents.start_end_durations_by_project"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.project.ProjectEvents.start_end_durations_by_project" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Tuple" title="(in Python v3.9)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>]]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="aw_watcher_project.events.project.duration_by_day_by_project">
+<code class="sig-prename descclassname">aw_watcher_project.events.project.</code><code class="sig-name descname">duration_by_day_by_project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">events</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/project.html#duration_by_day_by_project"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.project.duration_by_day_by_project" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.date" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">date</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="aw_watcher_project.events.project.duration_by_project">
+<code class="sig-prename descclassname">aw_watcher_project.events.project.</code><code class="sig-name descname">duration_by_project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">events</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/project.html#duration_by_project"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.project.duration_by_project" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="aw_watcher_project.events.project.events_by_project">
+<code class="sig-prename descclassname">aw_watcher_project.events.project.</code><code class="sig-name descname">events_by_project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">events</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/project.html#events_by_project"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.project.events_by_project" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference internal" href="#aw_watcher_project.events.project.ProjectEvent" title="aw_watcher_project.events.project.ProjectEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProjectEvent</span></code></a>]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="aw_watcher_project.events.project.start_end_durations_by_project">
+<code class="sig-prename descclassname">aw_watcher_project.events.project.</code><code class="sig-name descname">start_end_durations_by_project</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">events</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/project.html#start_end_durations_by_project"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.project.start_end_durations_by_project" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.List" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/typing.html#typing.Tuple" title="(in Python v3.9)"><code class="xref py py-data docutils literal notranslate"><span class="pre">Tuple</span></code></a>[<a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/datetime.html#datetime.datetime" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">datetime</span></code></a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">float</span></code></a>]]]</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-aw_watcher_project.events.window">
+<span id="aw-watcher-project-events-window-module"></span><h2>aw_watcher_project.events.window module<a class="headerlink" href="#module-aw_watcher_project.events.window" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="aw_watcher_project.events.window.WindowData">
+<em class="property">class </em><code class="sig-prename descclassname">aw_watcher_project.events.window.</code><code class="sig-name descname">WindowData</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">_typename</span></em>, <em class="sig-param"><span class="n">_fields</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">/</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/window.html#WindowData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.window.WindowData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+<dl class="py attribute">
+<dt id="aw_watcher_project.events.window.WindowData.app">
+<code class="sig-name descname">app</code><em class="property">: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></em><a class="headerlink" href="#aw_watcher_project.events.window.WindowData.app" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="aw_watcher_project.events.window.WindowData.title">
+<code class="sig-name descname">title</code><em class="property">: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></em><a class="headerlink" href="#aw_watcher_project.events.window.WindowData.title" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="aw_watcher_project.events.window.WindowEvent">
+<em class="property">class </em><code class="sig-prename descclassname">aw_watcher_project.events.window.</code><code class="sig-name descname">WindowEvent</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/window.html#WindowEvent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.window.WindowEvent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#aw_watcher_project.events.base.Event" title="aw_watcher_project.events.base.Event"><code class="xref py py-class docutils literal notranslate"><span class="pre">aw_watcher_project.events.base.Event</span></code></a></p>
+<dl class="py method">
+<dt id="aw_watcher_project.events.window.WindowEvent.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/window.html#WindowEvent.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.window.WindowEvent.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="aw_watcher_project.events.window.WindowEvent.app">
+<em class="property">property </em><code class="sig-name descname">app</code><a class="headerlink" href="#aw_watcher_project.events.window.WindowEvent.app" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="aw_watcher_project.events.window.WindowEvent.data">
+<code class="sig-name descname">data</code><em class="property">: <a class="reference internal" href="#aw_watcher_project.events.window.WindowEventData" title="aw_watcher_project.events.window.WindowEventData">aw_watcher_project.events.window.WindowEventData</a></em><a class="headerlink" href="#aw_watcher_project.events.window.WindowEvent.data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="aw_watcher_project.events.window.WindowEvent.title">
+<em class="property">property </em><code class="sig-name descname">title</code><a class="headerlink" href="#aw_watcher_project.events.window.WindowEvent.title" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="aw_watcher_project.events.window.WindowEventData">
+<em class="property">class </em><code class="sig-prename descclassname">aw_watcher_project.events.window.</code><code class="sig-name descname">WindowEventData</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">_typename</span></em>, <em class="sig-param"><span class="n">_fields</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">/</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aw_watcher_project/events/window.html#WindowEventData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#aw_watcher_project.events.window.WindowEventData" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#dict" title="(in Python v3.9)"><code class="xref py py-class docutils literal notranslate"><span class="pre">dict</span></code></a></p>
+<dl class="py attribute">
+<dt id="aw_watcher_project.events.window.WindowEventData.data">
+<code class="sig-name descname">data</code><em class="property">: <a class="reference internal" href="#aw_watcher_project.events.window.WindowData" title="aw_watcher_project.events.window.WindowData">aw_watcher_project.events.window.WindowData</a></em><a class="headerlink" href="#aw_watcher_project.events.window.WindowEventData.data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="aw_watcher_project.events.window.WindowEventData.duration">
+<code class="sig-name descname">duration</code><em class="property">: <a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)">float</a></em><a class="headerlink" href="#aw_watcher_project.events.window.WindowEventData.duration" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="aw_watcher_project.events.window.WindowEventData.id">
+<code class="sig-name descname">id</code><em class="property">: <a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.9)">int</a></em><a class="headerlink" href="#aw_watcher_project.events.window.WindowEventData.id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="aw_watcher_project.events.window.WindowEventData.timestamp">
+<code class="sig-name descname">timestamp</code><em class="property">: <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.9)">str</a></em><a class="headerlink" href="#aw_watcher_project.events.window.WindowEventData.timestamp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="aw_watcher_project.html" class="btn btn-neutral float-left" title="aw_watcher_project package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Nick DeRobertis.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+    <!-- Theme Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'G-9WQJ7LEXB3', 'auto');
+    
+    ga('send', 'pageview');
+    </script>
+
+    
+   
+
+</body>
+</html>

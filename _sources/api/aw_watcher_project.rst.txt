@@ -6,6 +6,13 @@ aw\_watcher\_project package
    :undoc-members:
    :show-inheritance:
 
+Subpackages
+-----------
+
+.. toctree::
+
+   aw_watcher_project.events
+
 Submodules
 ----------
 
@@ -25,6 +32,14 @@ aw\_watcher\_project.autostart module
    :undoc-members:
    :show-inheritance:
 
+aw\_watcher\_project.aw\_time module
+------------------------------------
+
+.. automodule:: aw_watcher_project.aw_time
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 aw\_watcher\_project.config module
 ----------------------------------
 
@@ -37,6 +52,14 @@ aw\_watcher\_project.exc module
 -------------------------------
 
 .. automodule:: aw_watcher_project.exc
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+aw\_watcher\_project.get\_activity module
+-----------------------------------------
+
+.. automodule:: aw_watcher_project.get_activity
    :members:
    :undoc-members:
    :show-inheritance:
