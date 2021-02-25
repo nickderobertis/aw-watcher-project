@@ -1,4 +1,4 @@
-from typing import TypedDict, List
+from typing import TypedDict, List, Generator
 
 from aw_watcher_project.events.window import WindowEventData, WindowEvent
 
@@ -13,6 +13,9 @@ class Activity:
 
     def __getitem__(self, item) -> WindowEvent:
         return self.events[item]
+
+    def __iter__(self) -> Generator[WindowEvent, WindowEvent, None]:
+        yield from self.events
 
     @classmethod
     def from_events(cls, events: List[WindowEvent]):
