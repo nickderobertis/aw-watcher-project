@@ -1,10 +1,10 @@
 typing_extensions
 PySide6
 aw_client @ https://github.com/ActivityWatch/aw-client/tarball/master
-PyYAML
-tzlocal
-Pillow
-colorama
-shellingham
-typer
 aw-watcher-project
+colorama
+typer
+tzlocal
+shellingham
+Pillow
+PyYAML
