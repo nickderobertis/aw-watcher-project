@@ -5,6 +5,7 @@ from typing import List, Dict, Tuple
 from typing_extensions import TypedDict
 
 from aw_watcher_project.events.base import AllEventData, Event
+from aw_core import Event as AWEvent
 from aw_watcher_project.exc import ProjectDoesNotExistException
 
 
@@ -21,6 +22,18 @@ class ProjectEvent(Event):
 
     def __init__(self, data: ProjectEventData):
         super().__init__(data)
+
+    @classmethod
+    def from_aw_event(cls, event: AWEvent) -> 'ProjectEvent':
+        data: ProjectEventData = ProjectEventData(
+            id=event.id,
+            timestamp=event.timestamp.isoformat(),
+            duration=event.duration.total_seconds(),
+            data=ProjectData(
+                project=event.data['project']
+            )
+        )
+        return cls(data)
 
     def __repr__(self) -> str:
         return f"<ProjectEvent(project={self.project}, time={self.time}, duration={self.duration})>"
@@ -73,6 +86,13 @@ class ProjectEvents:
 
     def __getitem__(self, item) -> ProjectEvent:
         return self.events[item]
+
+    @classmethod
+    def from_aw_events(cls, events: List[AWEvent]) -> 'ProjectEvents':
+        project_events = [ProjectEvent.from_aw_event(e) for e in events]
+        obj = cls([])
+        obj.events = project_events
+        return obj
 
     def duration_by_project(self) -> Dict[str, float]:
         return duration_by_project(self.events)

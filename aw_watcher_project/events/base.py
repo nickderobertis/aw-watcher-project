@@ -1,6 +1,7 @@
 import datetime
 from typing import Tuple
 
+from aw_core import Event as AWEvent
 from typing_extensions import TypedDict
 
 
@@ -13,6 +14,15 @@ class AllEventData(TypedDict):
 class Event:
     def __init__(self, data: AllEventData):
         self.data = data
+
+    @classmethod
+    def from_aw_event(cls, event: AWEvent) -> 'Event':
+        data: AllEventData = AllEventData(
+            id=event.id,
+            timestamp=event.timestamp.isoformat(),
+            duration=event.duration.total_seconds(),
+        )
+        return cls(data)
 
     def __repr__(self) -> str:
         return f"<Event(time={self.time}, duration={self.duration})>"
